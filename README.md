@@ -11,7 +11,7 @@ npx cap sync
 
 ## config the npm
 
-1. npm install
+1. npm ci
 2. pull the latest changes
 3. make sure u chanhge the version in package json
 4. publish it
