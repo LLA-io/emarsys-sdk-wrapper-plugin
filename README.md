@@ -9,35 +9,53 @@ npm install capacitor-emarsys-sdk-plugin
 npx cap sync
 ```
 
+## config the npm
+
+1. npm install
+2. pull the latest changes
+3. make sure u chanhge the version in package json
+4. publish it
+
+```bash
+npm run prepublishOnly && npm run deploy
+```
+
+4. commit and push the code
+
+-- Now install the npm in your project
+
+1. yarn remove @lla-io/capacitor-emarsys-sdk-plugin
+2. yarn add @lla-io/capacitor-emarsys-sdk-plugin
+
 ## API
 
 <docgen-index>
 
-* [`echo(...)`](#echo)
-* [`addListener('pushMessageEvent', ...)`](#addlistenerpushmessageevent)
-* [`getUUID(...)`](#getuuid)
-* [`requestPermissions()`](#requestpermissions)
-* [`checkPermissions()`](#checkpermissions)
-* [`setContact(...)`](#setcontact)
-* [`getPushToken()`](#getpushtoken)
-* [`register()`](#register)
-* [`checkPermissions()`](#checkpermissions)
-* [`clearContact(...)`](#clearcontact)
-* [`setPushTokenFirebase(...)`](#setpushtokenfirebase)
-* [`setPushMessage(...)`](#setpushmessage)
-* [`getUserInfo(...)`](#getuserinfo)
-* [`setUser(...)`](#setuser)
-* [`clearUser()`](#clearuser)
-* [`getDeviceInformation(...)`](#getdeviceinformation)
-* [`trackEvent(...)`](#trackevent)
-* [`loadInlineInapp(...)`](#loadinlineinapp)
-* [`addListener('EmarsysInAppDeepLink', ...)`](#addlisteneremarsysinappdeeplink)
-* [`addListener('EmarsysInAppApplicationEvent', ...)`](#addlisteneremarsysinappapplicationevent)
-* [`addListener('EmarsysPushDeepLink', ...)`](#addlisteneremarsyspushdeeplink)
-* [`addListener('EmarsysPushApplicationEvent', ...)`](#addlisteneremarsyspushapplicationevent)
-* [`addListener('EmarsysPushNotificationReceived', ...)`](#addlisteneremarsyspushnotificationreceived)
-* [Interfaces](#interfaces)
-* [Type Aliases](#type-aliases)
+- [`echo(...)`](#echo)
+- [`addListener('pushMessageEvent', ...)`](#addlistenerpushmessageevent)
+- [`getUUID(...)`](#getuuid)
+- [`requestPermissions()`](#requestpermissions)
+- [`checkPermissions()`](#checkpermissions)
+- [`setContact(...)`](#setcontact)
+- [`getPushToken()`](#getpushtoken)
+- [`register()`](#register)
+- [`checkPermissions()`](#checkpermissions)
+- [`clearContact(...)`](#clearcontact)
+- [`setPushTokenFirebase(...)`](#setpushtokenfirebase)
+- [`setPushMessage(...)`](#setpushmessage)
+- [`getUserInfo(...)`](#getuserinfo)
+- [`setUser(...)`](#setuser)
+- [`clearUser()`](#clearuser)
+- [`getDeviceInformation(...)`](#getdeviceinformation)
+- [`trackEvent(...)`](#trackevent)
+- [`loadInlineInapp(...)`](#loadinlineinapp)
+- [`addListener('EmarsysInAppDeepLink', ...)`](#addlisteneremarsysinappdeeplink)
+- [`addListener('EmarsysInAppApplicationEvent', ...)`](#addlisteneremarsysinappapplicationevent)
+- [`addListener('EmarsysPushDeepLink', ...)`](#addlisteneremarsyspushdeeplink)
+- [`addListener('EmarsysPushApplicationEvent', ...)`](#addlisteneremarsyspushapplicationevent)
+- [`addListener('EmarsysPushNotificationReceived', ...)`](#addlisteneremarsyspushnotificationreceived)
+- [Interfaces](#interfaces)
+- [Type Aliases](#type-aliases)
 
 </docgen-index>
 
@@ -56,8 +74,7 @@ echo(options: { value: string; }) => Promise<{ value: string; }>
 
 **Returns:** <code>Promise&lt;{ value: string; }&gt;</code>
 
---------------------
-
+---
 
 ### addListener('pushMessageEvent', ...)
 
@@ -72,8 +89,7 @@ addListener(eventName: 'pushMessageEvent', listenerFunc: (event: PushMessageEven
 
 **Returns:** <code>Promise&lt;<a href="#pluginlistenerhandle">PluginListenerHandle</a>&gt; & <a href="#pluginlistenerhandle">PluginListenerHandle</a></code>
 
---------------------
-
+---
 
 ### getUUID(...)
 
@@ -87,8 +103,7 @@ getUUID(value: string) => Promise<{ value: string; }>
 
 **Returns:** <code>Promise&lt;{ value: string; }&gt;</code>
 
---------------------
-
+---
 
 ### requestPermissions()
 
@@ -98,8 +113,7 @@ requestPermissions() => Promise<PermissionStatus>
 
 **Returns:** <code>Promise&lt;any&gt;</code>
 
---------------------
-
+---
 
 ### checkPermissions()
 
@@ -109,8 +123,7 @@ checkPermissions() => Promise<PermissionStatus>
 
 **Returns:** <code>Promise&lt;any&gt;</code>
 
---------------------
-
+---
 
 ### setContact(...)
 
@@ -122,8 +135,7 @@ setContact(options: SetContactOptions) => Promise<void>
 | ------------- | --------------------------------------------------------------- |
 | **`options`** | <code><a href="#setcontactoptions">SetContactOptions</a></code> |
 
---------------------
-
+---
 
 ### getPushToken()
 
@@ -133,8 +145,7 @@ getPushToken() => Promise<TokenResult>
 
 **Returns:** <code>Promise&lt;<a href="#tokenresult">TokenResult</a>&gt;</code>
 
---------------------
-
+---
 
 ### register()
 
@@ -144,8 +155,7 @@ register() => Promise<TokenResult>
 
 **Returns:** <code>Promise&lt;<a href="#tokenresult">TokenResult</a>&gt;</code>
 
---------------------
-
+---
 
 ### checkPermissions()
 
@@ -155,8 +165,7 @@ checkPermissions() => Promise<PermissionStatus>
 
 **Returns:** <code>Promise&lt;any&gt;</code>
 
---------------------
-
+---
 
 ### clearContact(...)
 
@@ -168,8 +177,7 @@ clearContact(options: SetContactOptions) => Promise<void>
 | ------------- | --------------------------------------------------------------- |
 | **`options`** | <code><a href="#setcontactoptions">SetContactOptions</a></code> |
 
---------------------
-
+---
 
 ### setPushTokenFirebase(...)
 
@@ -183,8 +191,7 @@ setPushTokenFirebase(data: { value: string; }) => Promise<ITokenInitializationSt
 
 **Returns:** <code>Promise&lt;<a href="#itokeninitializationstatus">ITokenInitializationStatus</a>&gt;</code>
 
---------------------
-
+---
 
 ### setPushMessage(...)
 
@@ -198,8 +205,7 @@ setPushMessage(data: PushMessageDTO) => Promise<{ value: PushMessageDTO; }>
 
 **Returns:** <code>Promise&lt;{ value: <a href="#pushmessagedto">PushMessageDTO</a>; }&gt;</code>
 
---------------------
-
+---
 
 ### getUserInfo(...)
 
@@ -213,8 +219,7 @@ getUserInfo(data: UserInformationDTO) => Promise<{ value: unknown; }>
 
 **Returns:** <code>Promise&lt;{ value: unknown; }&gt;</code>
 
---------------------
-
+---
 
 ### setUser(...)
 
@@ -226,8 +231,7 @@ setUser(data: { value: string; }) => Promise<void>
 | ---------- | ------------------------------- |
 | **`data`** | <code>{ value: string; }</code> |
 
---------------------
-
+---
 
 ### clearUser()
 
@@ -235,8 +239,7 @@ setUser(data: { value: string; }) => Promise<void>
 clearUser() => Promise<void>
 ```
 
---------------------
-
+---
 
 ### getDeviceInformation(...)
 
@@ -250,8 +253,7 @@ getDeviceInformation(options?: { value?: string | undefined; } | undefined) => P
 
 **Returns:** <code>Promise&lt;{ value: string; }&gt;</code>
 
---------------------
-
+---
 
 ### trackEvent(...)
 
@@ -265,8 +267,7 @@ trackEvent(options?: { eventName: string; eventAttributes: any; } | undefined) =
 
 **Returns:** <code>Promise&lt;{ value: string; }&gt;</code>
 
---------------------
-
+---
 
 ### loadInlineInapp(...)
 
@@ -278,8 +279,7 @@ loadInlineInapp(data: { inAppName: string; }) => Promise<void>
 | ---------- | ----------------------------------- |
 | **`data`** | <code>{ inAppName: string; }</code> |
 
---------------------
-
+---
 
 ### addListener('EmarsysInAppDeepLink', ...)
 
@@ -294,8 +294,7 @@ addListener(eventName: 'EmarsysInAppDeepLink', listenerFunc: (event: PushMessage
 
 **Returns:** <code>Promise&lt;<a href="#pluginlistenerhandle">PluginListenerHandle</a>&gt; & <a href="#pluginlistenerhandle">PluginListenerHandle</a></code>
 
---------------------
-
+---
 
 ### addListener('EmarsysInAppApplicationEvent', ...)
 
@@ -310,8 +309,7 @@ addListener(eventName: 'EmarsysInAppApplicationEvent', listenerFunc: (event: Pus
 
 **Returns:** <code>Promise&lt;<a href="#pluginlistenerhandle">PluginListenerHandle</a>&gt; & <a href="#pluginlistenerhandle">PluginListenerHandle</a></code>
 
---------------------
-
+---
 
 ### addListener('EmarsysPushDeepLink', ...)
 
@@ -326,8 +324,7 @@ addListener(eventName: 'EmarsysPushDeepLink', listenerFunc: (event: PushMessageE
 
 **Returns:** <code>Promise&lt;<a href="#pluginlistenerhandle">PluginListenerHandle</a>&gt; & <a href="#pluginlistenerhandle">PluginListenerHandle</a></code>
 
---------------------
-
+---
 
 ### addListener('EmarsysPushApplicationEvent', ...)
 
@@ -342,8 +339,7 @@ addListener(eventName: 'EmarsysPushApplicationEvent', listenerFunc: (event: Push
 
 **Returns:** <code>Promise&lt;<a href="#pluginlistenerhandle">PluginListenerHandle</a>&gt; & <a href="#pluginlistenerhandle">PluginListenerHandle</a></code>
 
---------------------
-
+---
 
 ### addListener('EmarsysPushNotificationReceived', ...)
 
@@ -358,18 +354,15 @@ addListener(eventName: 'EmarsysPushNotificationReceived', listenerFunc: (event: 
 
 **Returns:** <code>Promise&lt;<a href="#pluginlistenerhandle">PluginListenerHandle</a>&gt; & <a href="#pluginlistenerhandle">PluginListenerHandle</a></code>
 
---------------------
-
+---
 
 ### Interfaces
-
 
 #### PluginListenerHandle
 
 | Prop         | Type                                      |
 | ------------ | ----------------------------------------- |
 | **`remove`** | <code>() =&gt; Promise&lt;void&gt;</code> |
-
 
 #### PushMessageEvent
 
@@ -378,13 +371,11 @@ addListener(eventName: 'EmarsysPushNotificationReceived', listenerFunc: (event: 
 | **`eventName`** | <code>string</code>                            | 1.0.0 |
 | **`data`**      | <code>{ key: string; value: string; }[]</code> | 1.0.0 |
 
-
 #### PermissionStatus
 
 | Prop          | Type                                                        | Since |
 | ------------- | ----------------------------------------------------------- | ----- |
 | **`receive`** | <code><a href="#permissionstate">PermissionState</a></code> | 1.0.0 |
-
 
 #### SetContactOptions
 
@@ -392,13 +383,11 @@ addListener(eventName: 'EmarsysPushNotificationReceived', listenerFunc: (event: 
 | ----------------------- | ------------------- | ----- |
 | **`contactFieldValue`** | <code>string</code> | 1.0.0 |
 
-
 #### TokenResult
 
 | Prop        | Type                | Since |
 | ----------- | ------------------- | ----- |
 | **`token`** | <code>string</code> | 1.0.0 |
-
 
 #### ITokenInitializationStatus
 
@@ -406,7 +395,6 @@ addListener(eventName: 'EmarsysPushNotificationReceived', listenerFunc: (event: 
 | ------------- | -------------------- |
 | **`status`**  | <code>string</code>  |
 | **`isError`** | <code>boolean</code> |
-
 
 #### PushMessageDTO
 
@@ -416,7 +404,6 @@ addListener(eventName: 'EmarsysPushNotificationReceived', listenerFunc: (event: 
 | **`text`**  | <code>string</code> |
 | **`image`** | <code>string</code> |
 
-
 #### UserInformationDTO
 
 | Prop                | Type                |
@@ -424,9 +411,7 @@ addListener(eventName: 'EmarsysPushNotificationReceived', listenerFunc: (event: 
 | **`firebaseToken`** | <code>string</code> |
 | **`userId`**        | <code>string</code> |
 
-
 ### Type Aliases
-
 
 #### PermissionState
 
