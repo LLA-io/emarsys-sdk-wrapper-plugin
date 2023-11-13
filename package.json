@@ -1,6 +1,6 @@
 {
   "name": "@lla-io/emarsys-sdk-wrapper-plugin",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Custom Capacitor Plugin To have communication with Emarsys SDK",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
@@ -17,7 +17,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/LLA-io/emarsys-sdk-wrapper-plugin.git"
+    "url": "git+https://github.com/lla-io/emarsys-sdk-wrapper-plugin.git"
   },
   "bugs": {
     "url": "https://github.com/LLA-io/emarsys-sdk-wrapper-plugin.git/issues"
