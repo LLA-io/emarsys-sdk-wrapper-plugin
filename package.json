@@ -23,7 +23,7 @@
     "url": "https://github.com/LLA-io/emarsys-sdk-wrapper-plugin.git/issues"
   },
   "publishConfig": {
-    "access": "private",
+    "access": "restricted",
     "registry": "https://npm.pkg.github.com/@LLA-io"
   },
   "keywords": [
